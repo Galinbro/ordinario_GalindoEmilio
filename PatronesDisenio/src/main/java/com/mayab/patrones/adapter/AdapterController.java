@@ -11,6 +11,7 @@ package com.mayab.patrones.adapter;
  */
 public class AdapterController {
     public static void main(String[] args) {
+        
         OldPerson old = new BabyBoomer();
         NewPerson me = new Millenian();
         OldPerson oldMe = new NewPersonAdapter(me);
