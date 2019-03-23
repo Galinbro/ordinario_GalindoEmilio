@@ -28,9 +28,19 @@ public class Usuario {
         return Usuario.instance;
     }
     
-    public void login() { this.Logged=true; }
+    public void login() {
+        this.Logged=true; 
+    }
     
-    public boolean getLogged() { return this.Logged; }
-    public String getName() { return this.Nombre; }
-    public String getLast() { return this.Apellido; }
+    public boolean getLogged() {
+        return this.Logged; 
+    }
+    
+    public String getName() {
+        return this.Nombre; 
+    }
+    
+    public String getLast() {
+        return this.Apellido; 
+    }
 }

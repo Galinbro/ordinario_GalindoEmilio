@@ -18,9 +18,9 @@ public class StrategyController {
         BankAccount me = new BankAccount();
         
         Transaction t1 = new Transaction("04/03/95","sams",100,"bienes raices");
-        Transaction t2 = new Transaction("04/03/96","soriana",80,"entretenimiento");
-        Transaction t3 = new Transaction("04/03/97","recorcholis",450,"mercadotecnia");
-        Transaction t4 = new Transaction("04/03/98","aaa",500,"comida");
+        Transaction t2 = new Transaction("04/03/98","soriana",80,"entretenimiento");
+        Transaction t3 = new Transaction("04/03/92","recorcholis",450,"mercadotecnia");
+        Transaction t4 = new Transaction("04/03/91","aaa",500,"comida");
         
         Report reporte = new ReportCantidad(me);
         
