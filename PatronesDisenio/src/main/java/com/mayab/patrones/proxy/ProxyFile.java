@@ -22,7 +22,7 @@ public class ProxyFile implements File{
     
     public String borrar() {
         if(usuario.getType() == 1)
-        return file.borrar();
+            return file.borrar();
         else
             return "no tiene los permisos";
     }
