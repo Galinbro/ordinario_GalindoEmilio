@@ -65,6 +65,14 @@ public class StrategyController {
         
         reporte.desplegarT();
         
+        
+        System.out.println("Creando nuevo reporte sorteado por categoria:");
+        
+        Report reporte2 = new ReportCategoria(me);
+        
+        reporte2.performSort(me.getTransaction());
+        
+        reporte2.desplegarT();
     } 
     
     }
