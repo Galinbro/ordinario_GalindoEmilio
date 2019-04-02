@@ -5,26 +5,23 @@
  */
 package com.mayab.patrones.strategy;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
  *
  * @author galindo
  */
-public class SortFecha implements Comparator<Transaction>{
+public class SortFecha implements Sortable,Comparator<Transaction>{
 
-    
-//    ArrayList<Transaction> transaction;
-//    String sort;
-//    
-//    public SortCantidad(ArrayList<Transaction> trans){
-//        this.transaction = trans;
-//        
-//    }
-
+    public void sort(ArrayList<Transaction> o) {
+        Collections.sort(o, new SortFecha());
+    }
 
     public int compare(Transaction o1, Transaction o2){ 
-        
+
         return (o1.getAño() - o2.getAño());
     } 
+
 } 

@@ -12,19 +12,10 @@ import java.util.ArrayList;
  * @author galindo
  */
 public class ReportCantidad extends Report{
-
-    BankAccount bank;
     
     public ReportCantidad(BankAccount ban){
-        this.bank = ban;
+        bank = ban;
+        setSortable(new SortCantidad());
     }
-
-    public void desplegarT(){
-        System.out.println("- - - - - - - -");
-        for (Transaction str : bank.getTransaction()){
-			System.out.println(str.getCantidad());
-		}
-    }
-    
     
 }

@@ -6,12 +6,14 @@
 package com.mayab.patrones.strategy;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  *
  * @author galindo
  */
-public interface Sortable {
+public interface Sortable{
     
-//    public void sort();
+    public abstract int compare(Transaction o1, Transaction o2);
+    public abstract void sort(ArrayList<Transaction> o);
 }

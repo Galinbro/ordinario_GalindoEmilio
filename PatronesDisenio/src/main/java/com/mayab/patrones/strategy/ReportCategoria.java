@@ -10,17 +10,11 @@ package com.mayab.patrones.strategy;
  * @author galindo
  */
 public class ReportCategoria extends Report{
-    
-    BankAccount bank;
+
         public ReportCategoria(BankAccount ban){
-        this.bank = ban;
+        bank = ban;
+        setSortable(new SortCategoria());
     }
 
-    public void desplegarT(){
-        System.out.println("- - - - - - - -");
-        for (Transaction str : bank.getTransaction()){
-			System.out.println(str.getCategoria());
-		}
-    }
     
 }

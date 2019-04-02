@@ -10,18 +10,11 @@ package com.mayab.patrones.strategy;
  * @author galindo
  */
 public class ReportComercio extends Report{
-        
-    BankAccount bank;
     
     public ReportComercio(BankAccount ban){
-        this.bank = ban;
+        bank = ban;
+        setSortable(new SortComercio());
     }
 
-    public void desplegarT(){
-        System.out.println("- - - - - - - -");
-        for (Transaction str : bank.getTransaction()){
-			System.out.println(str.getComercio());
-		}
-    }
     
 }

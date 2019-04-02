@@ -11,17 +11,10 @@ package com.mayab.patrones.strategy;
  */
 public class ReportFecha extends Report{
             
-    BankAccount bank;
-    
     public ReportFecha(BankAccount ban){
-        this.bank = ban;
+         bank = ban;
+        setSortable(new SortFecha());
     }
 
-    public void desplegarT(){
-        System.out.println("- - - - - - - -");
-        for (Transaction str : bank.getTransaction()){
-			System.out.println(str.getFecha());
-		}
-    }
     
 }

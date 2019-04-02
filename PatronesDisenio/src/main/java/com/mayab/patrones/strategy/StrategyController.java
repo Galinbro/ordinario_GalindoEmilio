@@ -29,35 +29,42 @@ public class StrategyController {
         me.addTransaction(t3);
         me.addTransaction(t4);
         
+        System.out.println("Array of transsactions:");
+        
+        reporte.desplegarT();
+        
         System.out.println("Sort por cantidad:");
         
-        Collections.sort(me.getTransaction(), new SortCantidad()); 
+        reporte.setSortable(new SortCantidad());
+        
+        reporte.performSort(me.getTransaction());
         
         reporte.desplegarT();
         
         System.out.println("\n" + "Sort por categoria:");
         
-        Collections.sort(me.getTransaction(), new SortCategoria()); 
+        reporte.setSortable(new SortCategoria());
         
-        Report reporte2 = new ReportCategoria(me);
+        reporte.performSort(me.getTransaction());
         
-        reporte2.desplegarT();
+        reporte.desplegarT();
         
         System.out.println("\n" + "Sort por comercio:");
         
-        Collections.sort(me.getTransaction(), new SortComercio());
+        reporte.setSortable(new SortComercio());
         
-        Report reporte3 = new ReportComercio(me);
+        reporte.performSort(me.getTransaction());
         
-        reporte3.desplegarT();
+        reporte.desplegarT();
         
         System.out.println("\n" + "Sort por fecha:");
         
-        Collections.sort(me.getTransaction(), new SortFecha());
+        reporte.setSortable(new SortFecha());
         
-        Report reporte4 = new ReportFecha(me);
+        reporte.performSort(me.getTransaction());
         
-        reporte4.desplegarT();
+        reporte.desplegarT();
+        
     } 
     
     }

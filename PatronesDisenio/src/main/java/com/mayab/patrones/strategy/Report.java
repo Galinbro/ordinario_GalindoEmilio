@@ -14,6 +14,22 @@ import java.util.Arrays;
  */
 public abstract class Report extends BankAccount{
     Sortable sortable;
+    BankAccount bank;
     
-    public abstract void desplegarT();
+    public void desplegarT(){
+        System.out.println("- - - - - - - -");
+        for (Transaction str : bank.getTransaction()){
+			System.out.printf("%-15s-%s-","fecha: " + str.getFecha(), " comercio: " + str.getComercio());
+                        System.out.printf("%-15s-%s\n"," cantidad: " + str.getCantidad() , " categoria: " + str.getCategoria());
+		}
+    }
+    
+
+	public void setSortable(Sortable fb) {
+		this.sortable = fb;
+	}
+        
+        public void performSort(ArrayList<Transaction> o){
+            sortable.sort(o);
+        }
 }
