@@ -21,6 +21,12 @@ public class BabyBoomer implements OldPerson{
         this.date = "01/01/60";
     }
     
+    public BabyBoomer(String n,String l, String d){
+        this.name = n;
+        this.lastName = l;
+        this.date = d;
+    }
+    
     public String name() {
         return this.name;
     }
