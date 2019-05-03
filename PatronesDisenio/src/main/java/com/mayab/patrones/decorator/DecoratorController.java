@@ -29,6 +29,5 @@ public class DecoratorController {
 		System.out.println(burger3.getDescription() 
 				+ " $" + burger3.cost());
         
-        
     }
 }
