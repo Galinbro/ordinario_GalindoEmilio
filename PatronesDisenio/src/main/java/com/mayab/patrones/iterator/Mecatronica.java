@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author galindo
  */
-public class Mecatronica {
+public class Mecatronica implements Facultad  {
     private String schoolName;
     private String[] student = new String[10];
     

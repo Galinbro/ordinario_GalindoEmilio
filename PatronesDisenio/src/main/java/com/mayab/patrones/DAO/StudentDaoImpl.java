@@ -12,50 +12,36 @@ package com.mayab.patrones.DAO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentDaoImpl implements Dao {
+public class StudentDaoImpl implements StudentDao {
 	
    //list is working as a database
-   List<User> students;
+   List<Student> students;
 
    public StudentDaoImpl(){
-      students = new ArrayList<User>();
-      Student student1 = new Student();
-      Student student2 = new Student();
-      Student student3 = new Student();
-      Student student4 = new Student();
-      Student student5 = new Student();
-      Student student6 = new Student();
-      
+      students = new ArrayList<Student>();
+      Student student1 = new Student("Robert",0);
+      Student student2 = new Student("John",1);
       students.add(student1);
-      students.add(student2);
-      students.add(student3);
-      students.add(student4);
-      students.add(student5);
-      students.add(student6);
-      
+      students.add(student2);		
    }
-   
-    public void deleteUser(User student) {
-      students.remove(student.getId());
-      System.out.println("Student: id " + student.printS() + ", deleted from database");
-    }
 
+   public void deleteStudent(Student student) {
+      students.remove(student.getRollNo());
+      System.out.println("Student: Roll No " + student.getRollNo() + ", deleted from database");
+   }
 
    //retrive list of students from the database
-   
-   public List<User> getAll() {
+
+   public List<Student> getAllStudents() {
       return students;
    }
 
-   
-   public User getUser(int rollNo) {
+   public Student getStudent(int rollNo) {
       return students.get(rollNo);
    }
 
-
-    public void updateUser(User student) {
-        students.get(student.getId()).setName(student.getName());
-      System.out.println("Student: id " + student.printS() + ", updated in the database");
-    }
-
- }
+   public void updateStudent(Student student) {
+      students.get(student.getRollNo()).setName(student.getName());
+      System.out.println("Student: Roll No " + student.getRollNo() + ", updated in the database");
+   }
+}

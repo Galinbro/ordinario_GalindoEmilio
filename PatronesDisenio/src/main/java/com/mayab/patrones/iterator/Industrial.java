@@ -14,7 +14,7 @@ import java.util.List;
  *
  * @author galindo
  */
-public class Industrial {
+public class Industrial implements Facultad {
     private String schoolName;
     private List<String> student = new ArrayList();
     

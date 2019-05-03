@@ -4,72 +4,37 @@
  * and open the template in the editor.
  */
 package com.mayab.patrones.DAO;
-
 import com.github.javafaker.Faker;
 import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  *
  * @author galindo
  */
-public class Student extends User{
-    
-    
-    private String uni;
-    
-   public Student(){
-       Faker faker = new Faker();
+public class Student {
+   private String name;
+   private int id;
+   private static final AtomicInteger count = new AtomicInteger(-1); 
+
+   Student(String name, int rollNo){
+      Faker faker = new Faker();
 
         this.name = faker.name().fullName();
-        this.address = faker.address().streetAddress();
-        this.uni = faker.university().name();
         id = count.incrementAndGet(); 
-        
    }
 
-    
-   //print stundet
-   public void print(){
-       System.out.println(id + " - " + name + " - " + address + " - " + uni);
+   public String getName() {
+      return name;
    }
-      public String printS(){
-       return(id + " - " + name + " - " + address + " - " + uni);
+
+   public void setName(String name) {
+      this.name = name;
    }
-   
-    
-    //getters setters
 
-    public String getName() {
-        return name;
-    }
+   public int getRollNo() {
+      return id;
+   }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddres() {
-        return address;
-    }
-
-    public void setAddres(String addres) {
-        this.address = addres;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int idStudent) {
-        this.id = idStudent;
-    }
-
-    public String getUni() {
-        return uni;
-    }
-
-    public void setUni(String uni) {
-        this.uni = uni;
-    }
-    
-    
+   public void setRollNo(int rollNo) {
+      this.id = rollNo;
+   }
 }

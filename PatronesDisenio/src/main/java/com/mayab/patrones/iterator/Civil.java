@@ -16,7 +16,7 @@ import java.util.Queue;
  *
  * @author galindo
  */
-public class Civil {
+public class Civil implements Facultad {
     private String schoolName;
     private Queue<String> student = new LinkedList<>(); 
     

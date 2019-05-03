@@ -14,7 +14,7 @@ import java.util.Queue;
  *
  * @author galindo
  */
-public class FacultarLista {
+public class IteratorController {
      public static void main(String[] args) {
          Informatica inf = new Informatica();
          Industrial ind = new Industrial();
@@ -62,23 +62,23 @@ public class FacultarLista {
         
         System.out.println("Informatica\n-------");
         Iterator student = inf.createIterator();
-	printMenu(student);
+	print(student);
         
         System.out.println("\nIndustrial\n-------");
         student = ind.createIterator();
-	printMenu(student);
+	print(student);
         
         System.out.println("\nMecatronica\n-------");
         student = mec.createIterator();
-	printMenu(student);
+	print(student);
         
         System.out.println("\nCivil\n-------");
         student = civ.createIterator();
-	printMenu(student);
+	print(student);
         
      }
      
-     private static void printMenu(Iterator i) {
+     private static void print(Iterator i) {
 		while (i.hasNext()) {
 			String student = (String)i.next();
 			System.out.println(student);
