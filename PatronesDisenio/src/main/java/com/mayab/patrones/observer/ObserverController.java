@@ -10,8 +10,7 @@ package com.mayab.patrones.observer;
  * @author galindo
  */
 public class ObserverController {
- public static void main(String[] args) 
-    {
+ public static void main(String[] args) {
         Vuelo vueloMerida = new Vuelo("Salida", "A tiempo", "Merida", "111");
         
         Pasajero pasajero1 = new Pasajero("Emilio","11" );
