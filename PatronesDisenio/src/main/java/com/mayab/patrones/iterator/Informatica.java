@@ -25,7 +25,6 @@ public class Informatica implements Facultad {
         }
     }
 
-
     public Iterator createIterator() {
         return student.iterator();
     }

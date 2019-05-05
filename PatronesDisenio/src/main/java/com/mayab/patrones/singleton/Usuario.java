@@ -5,6 +5,8 @@
  */
 package com.mayab.patrones.singleton;
 
+import com.github.javafaker.Faker;
+
 /**
  *
  * @author galindo
@@ -14,12 +16,18 @@ package com.mayab.patrones.singleton;
 
 
 public class Usuario {
-    private String Nombre;
-    private String Apellido;
-    private boolean Logged=false;
+    
+    private String nombre;
+    private String apellido;
+    private boolean logged=false;
     private static Usuario instance;
     
-    private Usuario() {}
+    private Usuario() {
+        Faker faker = new Faker();
+        
+        nombre = faker.name().firstName();
+        apellido = faker.name().lastName();
+    }
     
     public static Usuario getInstance() {
         if(Usuario.instance==null) {
@@ -29,18 +37,19 @@ public class Usuario {
     }
     
     public void login() {
-        this.Logged=true; 
+        this.logged = true; 
+    }
+    
+    public void logout() {
+        this.logged = false; 
     }
     
     public boolean getLogged() {
-        return this.Logged; 
+        return this.logged; 
     }
     
-    public String getName() {
-        return this.Nombre; 
+    public String getFullName() {
+        return this.nombre + " " + this.apellido; 
     }
     
-    public String getLast() {
-        return this.Apellido; 
-    }
 }
