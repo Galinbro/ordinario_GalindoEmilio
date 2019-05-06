@@ -33,8 +33,6 @@ public class Producto extends Catalogo{
     public void guardar(int x) {
         this.precio = x;
     }
-    
-
 
     public int getCodigoBarra() {
         return codigoBarra;
