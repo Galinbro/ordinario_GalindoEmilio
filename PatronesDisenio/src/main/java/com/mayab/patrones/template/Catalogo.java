@@ -11,8 +11,6 @@ package com.mayab.patrones.template;
  */
 public abstract class Catalogo {
     
-    
-    
     final public void update(int x){
         
         leerDatos();
